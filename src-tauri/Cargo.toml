@@ -1,0 +1,35 @@
+[package]
+name = "thirdynal-dashboard"
+version = "1.2.0"
+description = "THIRDYNAL ECOMMERCE CORP. Analytics Dashboard"
+authors = ["THIRDYNAL ECOMMERCE CORP."]
+license = "UNLICENSED"
+edition = "2021"
+rust-version = "1.78"
+
+[lib]
+name = "thirdynal_dashboard_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-fs = "2"
+tauri-plugin-shell = "2"
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sqlx = { version = "0.8", features = ["runtime-tokio", "sqlite", "migrate", "chrono", "uuid"] }
+tokio = { version = "1", features = ["full"] }
+argon2 = "0.5"
+rand = "0.8"
+chrono = { version = "0.4", features = ["serde"] }
+hex = "0.4"
+base64 = "0.22"
+calamine = "0.26"
+uuid = { version = "1", features = ["v4", "serde"] }
+thiserror = "1"
+
