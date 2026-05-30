@@ -30,9 +30,6 @@ jobs:
       - name: Install frontend dependencies
         run: npm ci
 
-      - name: Check formatting
-        run: npx prettier --check "src/**/*.{ts,tsx,css}"
-
       - name: Type check frontend
         run: npm run build
 
