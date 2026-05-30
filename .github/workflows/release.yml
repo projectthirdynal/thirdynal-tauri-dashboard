@@ -41,6 +41,9 @@ jobs:
       - name: Build frontend
         run: npm run build
 
+      - name: Install Tauri CLI
+        run: npm install -g @tauri-apps/cli
+
       - name: Build and Release
         uses: tauri-apps/tauri-action@v0
         env:
@@ -51,3 +54,4 @@ jobs:
           releaseBody: 'See the assets to download and install this version.'
           releaseDraft: true
           prerelease: false
+          projectPath: '.'
